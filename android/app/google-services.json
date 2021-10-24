@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "1089958569140",
+    "project_id": "bookshelf-5cc4a",
+    "storage_bucket": "bookshelf-5cc4a.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1089958569140:android:2ef2ea041655917e09e3e1",
+        "android_client_info": {
+          "package_name": "com.codella.bookshelf"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1089958569140-s3l97vm14r70j3rgk5oplirbkqr3gqbu.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.codella.bookshelf",
+            "certificate_hash": "554d932a57145700c5816764b42f8fb1d24997d1"
+          }
+        },
+        {
+          "client_id": "1089958569140-et6lgb94lchonaag9pbrfe81snm9cem8.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBDrM8PJVa3ODvzqsSfnX-Q2lY9hcqv6gQ"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1089958569140-et6lgb94lchonaag9pbrfe81snm9cem8.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
