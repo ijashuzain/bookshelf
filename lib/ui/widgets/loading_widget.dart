@@ -3,7 +3,10 @@ import 'package:flutter/material.dart';
 import 'package:lottie/lottie.dart';
 
 class LoadingWidget extends StatelessWidget {
-   LoadingWidget({Key key}) : super(key: key);
+
+  final String title;
+
+   LoadingWidget({Key key, this.title}) : super(key: key);
   
   Config appConfig;
 
@@ -13,10 +16,25 @@ class LoadingWidget extends StatelessWidget {
     return Scaffold(
       backgroundColor: Colors.white,
       body: Center(
-        child: Container(
-          height: appConfig.rH(10),
-          width: appConfig.rW(30),
-          child: Lottie.asset("assets/loading.json",)
+        child: title != null ? Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          crossAxisAlignment: CrossAxisAlignment.center,
+          children: [
+            Container(
+                height: appConfig.rH(10),
+                width: appConfig.rW(30),
+                child: Lottie.asset("assets/loading.json",)
+            ),
+            Text("$title",style: TextStyle(
+              color: Colors.black54,
+              fontFamily: "Mulish",
+              fontSize: 12
+            ),)
+          ],
+        ) :  Container(
+            height: appConfig.rH(10),
+            width: appConfig.rW(30),
+            child: Lottie.asset("assets/loading.json",)
         ),
       ),
     );

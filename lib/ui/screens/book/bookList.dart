@@ -66,7 +66,11 @@ class _BooksListState extends State<BooksList> {
                       ),
                       Row(
                         children: [
-                          Icon(Icons.arrow_back_ios),
+                          GestureDetector(
+                              onTap: (){
+                                Navigator.pop(context);
+                              },
+                              child: Icon(Icons.arrow_back)),
                           SizedBox(
                             width: 20,
                           ),
@@ -110,6 +114,7 @@ class _BooksListState extends State<BooksList> {
                             onTap: () {
                               provider.setCurrentBook(index).then(
                                 (value) {
+                                  booksProvider.removePickedImage();
                                   Navigator.push(
                                     context,
                                     MaterialPageRoute(builder: (context) => BooksUpdate(type: "OLD",)),

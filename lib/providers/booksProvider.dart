@@ -45,7 +45,6 @@ class BooksProvider extends ChangeNotifier {
   }
 
   removePickedImage(){
-    pickedImage.delete();
     pickedImage = null;
     print("Picked Image : $pickedImage");
     notifyListeners();

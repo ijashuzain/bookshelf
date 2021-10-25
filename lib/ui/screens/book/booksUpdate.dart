@@ -38,7 +38,9 @@ class _BooksUpdateState extends State<BooksUpdate> {
   void initState() {
     WidgetsBinding.instance.addPostFrameCallback((timeStamp) async {
       booksProvider = context.read<BooksProvider>();
-      if (widget.type != "NEW") {
+      print("WORKED");
+      if (widget.type == "OLD") {
+
         title.text = booksProvider.currentBook.title;
         subtitle.text = booksProvider.currentBook.subtitle;
         description.text = booksProvider.currentBook.description;
@@ -308,7 +310,7 @@ class _BooksUpdateState extends State<BooksUpdate> {
                       width: appConfig.rW(100),
                       color: Color.fromRGBO(255, 255, 255, 0.5),
                       child: Center(
-                        child: LoadingWidget(),
+                        child: LoadingWidget(title: provider.updatingImage ? "Image Uploading" : provider.updatingBook ? "Book Uploading" : "Loading" ,),
                       ),
                     )
                   : Container(),

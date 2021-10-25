@@ -29,8 +29,19 @@ class BookDetailsState extends State<BookDetails> {
               child: ListView(
                 physics: BouncingScrollPhysics(),
                 children: [
-                  SizedBox(
-                    height: appConfig.rH(5),
+
+                  Padding(
+                    padding: const EdgeInsets.all(8.0),
+                    child: Row(
+                      children: [
+                        IconButton(
+                            color: Colors.black54,
+                            onPressed: (){
+                          Navigator.pop(context);
+                        }, icon: Icon(Icons.arrow_back),),
+                        Expanded(child: Container())
+                      ],
+                    ),
                   ),
                   Column(
                     children: [
